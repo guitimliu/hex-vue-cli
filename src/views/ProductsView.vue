@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'HomeView',
+  name: 'ProductsView',
   data () {
     return {
-      title: '首頁'
+      title: '商品列表'
     }
   }
 }
