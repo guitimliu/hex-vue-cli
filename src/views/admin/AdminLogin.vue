@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="login">
     <div class="container">
       <h1>{{ title }}</h1>
       <p>{{ desc }}</p>

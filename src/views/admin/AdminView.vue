@@ -1,0 +1,36 @@
+<template>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="list-group">
+                    <template v-for="menu in adminMenus" :key="menu.name">
+                        <router-link class="list-group-item" :to="menu.link">{{ menu.name }}</router-link>
+                    </template>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <router-view></router-view>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+
+export default {
+  data () {
+    return {
+      adminMenus: [
+        {
+          name: '商品列表',
+          link: './products'
+        },
+        {
+          name: '訂單列表',
+          link: './orders'
+        }
+      ]
+    }
+  }
+}
+</script>

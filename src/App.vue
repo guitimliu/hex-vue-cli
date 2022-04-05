@@ -3,7 +3,7 @@
     <router-link to="/">首頁</router-link> |
     <router-link to="/products">商品列表</router-link> |
     <router-link to="/cart">購物車</router-link> |
-    <router-link to="/loginAdmin">管理員後台</router-link> |
+    <router-link to="/admin">管理員後台</router-link> |
   </nav>
   <router-view/>
 </template>
