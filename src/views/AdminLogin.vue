@@ -22,6 +22,7 @@
 
 <script>
 import axios from 'axios'
+import checkLogin from '@/assets/script/checkLogin'
 
 export default {
   name: 'loginAdmin',
@@ -39,22 +40,13 @@ export default {
     sendLogin () {
       axios.post(`${process.env.VUE_APP_API_URL}admin/signin`, this.user)
         .then(res => {
-          const { token, expired } = res.data
-          document.cookie = `vueLogin=${token}; expired=${new Date(expired)}`
+          const { token } = res.data
+          // document.cookie = `vueLogin=${token}; expired=${new Date(expired)}`
+          localStorage.setItem('token', token)
           // 驗證是否登入
-          this.checkLogin(token)
-        })
-        .catch(() => {
-          alert('登入失敗，請確認帳號密碼是否正確。')
-        })
-    },
-    checkLogin (token) {
-      axios.defaults.headers.common.Authorization = token
-
-      axios.post(`${process.env.VUE_APP_API_URL}api/user/check`)
-        .then(() => {
+          checkLogin()
           alert('登入成功')
-          this.$router.push('https://www.google.com/')
+          this.$router.push('/admin/products')
         })
         .catch(() => {
           alert('登入失敗，請確認帳號密碼是否正確。')

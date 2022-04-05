@@ -17,14 +17,15 @@ const routes = [
     component: () => import('../views/CartView.vue')
   },
   {
+    path: '/adminLogin',
+    name: 'AdminLogin',
+    component: () => import('../views/AdminLogin.vue')
+  },
+  {
     path: '/admin',
     name: 'AdminView',
     component: () => import('../views/admin/AdminView.vue'),
     children: [{
-      path: 'login',
-      name: 'AdminLogin',
-      component: () => import('../views/admin/AdminLogin.vue')
-    }, {
       path: 'products',
       name: 'AdminProducts',
       component: () => import('../views/admin/AdminProducts.vue')

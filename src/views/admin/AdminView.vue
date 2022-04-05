@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import checkLogin from '@/assets/script/checkLogin'
 
 export default {
   data () {
@@ -23,14 +24,17 @@ export default {
       adminMenus: [
         {
           name: '商品列表',
-          link: './products'
+          link: '/admin/products'
         },
         {
           name: '訂單列表',
-          link: './orders'
+          link: '/admin/orders'
         }
       ]
     }
+  },
+  mounted () {
+    checkLogin(this)
   }
 }
 </script>
