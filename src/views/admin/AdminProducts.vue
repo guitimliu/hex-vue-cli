@@ -26,28 +26,31 @@
                 <button type="button" v-on:click="showDetail(item)" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#productDetail">
                     編輯商品
                 </button>
-                <!-- <button type="button" @click="deleteProduct(item)" class="btn btn-danger ms-2">刪除商品</button> -->
                 <button type="button" class="btn btn-danger ms-2" @click="temp = {...item}" data-bs-toggle="modal" data-bs-target="#deleteModal">刪除商品</button>
             </td>
             </tr>
         </tbody>
     </table>
     <Pagination :data="pagination" @return-page="getProducts" />
+    <deleteProduct :data="temp" @render-products="getProducts"/>
 </template>
 
 <script>
 import axios from 'axios'
 import checkLogin from '@/assets/script/checkLogin'
 import Pagination from '@/components/PaginationButton.vue'
+import deleteProduct from '@/components/DeleteProduct.vue'
 
 export default {
   components: {
-    Pagination
+    Pagination,
+    deleteProduct
   },
   data () {
     return {
       products: null,
-      pagination: null
+      pagination: null,
+      temp: null
     }
   },
   methods: {
