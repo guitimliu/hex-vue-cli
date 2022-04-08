@@ -25,12 +25,17 @@
             </tr>
         </tbody>
     </table>
+    <deleteOrder :data="temp" @render-orders="getOrders"/>
 </template>
 
 <script>
 import axios from 'axios'
+import deleteOrder from '@/components/DeleteOrder.vue'
 
 export default {
+  components: {
+    deleteOrder
+  },
   data () {
     return {
       orders: null
