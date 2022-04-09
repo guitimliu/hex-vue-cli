@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkhex_vue_cli"]=self["webpackChunkhex_vue_cli"]||[]).push([[909],{909:function(e,n,t){t.r(n),t.d(n,{default:function(){return h}});var u=t(252),r=t(577);const c={class:"home"};function i(e,n,t,i,a,l){return(0,u.wg)(),(0,u.iD)("div",c,[(0,u._)("h1",null,(0,r.zw)(a.title),1)])}var a={name:"HomeView",data(){return{title:"首頁"}}},l=t(744);const s=(0,l.Z)(a,[["render",i]]);var h=s}}]);
+//# sourceMappingURL=909.cc1a34fb.js.map

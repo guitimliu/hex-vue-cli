@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkhex_vue_cli"]=self["webpackChunkhex_vue_cli"]||[]).push([[746],{746:function(e,t,n){n.r(t),n.d(t,{default:function(){return h}});var u=n(252),r=n(577);const c={class:"home"};function i(e,t,n,i,a,l){return(0,u.wg)(),(0,u.iD)("div",c,[(0,u._)("h1",null,(0,r.zw)(a.title),1)])}var a={name:"ProductsView",data(){return{title:"商品列表"}}},l=n(744);const s=(0,l.Z)(a,[["render",i]]);var h=s}}]);
+//# sourceMappingURL=746.0088ab5f.js.map
