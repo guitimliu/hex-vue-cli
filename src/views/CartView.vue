@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <h1>{{ title }}</h1>
-    <cart-form></cart-form>
+    <div class="container">
+      <cart-form></cart-form>
+    </div>
   </div>
 </template>
 
