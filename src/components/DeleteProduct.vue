@@ -1,7 +1,7 @@
 <template>
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content bg-dark">
+            <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">刪除商品</h5>
                 </div>
@@ -26,7 +26,6 @@ export default {
       this.$emit('render-products')
     },
     deleteProduct () {
-      console.log(this.data)
       axios.delete(`${process.env.VUE_APP_API_URL}api/${process.env.VUE_APP_API_PATH}/admin/product/${this.data.id}`)
         .then(() => {
           alert('已成功刪除商品')
