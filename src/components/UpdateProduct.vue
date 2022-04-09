@@ -148,7 +148,7 @@ export default {
           }
           this.newData.imagesUrl.push(this.newData.imageUrl)
         })
-        .catch((err) => { console.dir(err) })
+        .catch(() => { /* error */ })
     }
   }
 }
