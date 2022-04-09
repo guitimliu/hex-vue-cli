@@ -13,7 +13,7 @@
           <input type="password" id="password" name="password" v-model="user.password" class="form-control">
         </div>
         <div class="my-2">
-          <input type="submit" class="btn btn-primary w-100" @click.prevent="sendLogin" value="登入">
+          <input type="submit" class="btn btn-success w-100" @click.prevent="sendLogin" value="登入">
         </div>
       </form>
     </div>
