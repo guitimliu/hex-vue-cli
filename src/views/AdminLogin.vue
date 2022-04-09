@@ -2,7 +2,7 @@
   <div class="login">
     <div class="container">
       <h1>{{ title }}</h1>
-      <p>{{ desc }}</p>
+      <p class="text-center">{{ desc }}</p>
       <form class="w-50 mx-auto">
         <div class="my-2">
           <label for="username" class="form-label">管理員帳號</label>
